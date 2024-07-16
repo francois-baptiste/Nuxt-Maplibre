@@ -1,5 +1,5 @@
 import { type Ref, computed } from 'vue';
-import { Popup } from "mapbox-gl";
+import { Popup } from "maplibre-gl";
 import { useState } from "#imports";
 import type { MapboxPopupsObject } from '../../module';
 

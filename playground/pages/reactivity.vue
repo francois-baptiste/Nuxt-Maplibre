@@ -7,7 +7,7 @@
       map-id="map2"
       style="top: 80px"
       :options="{
-        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        style: 'https://demotiles.maplibre.org/style.json', // style URL
         center: [100.0, 0.0], // starting position [lng, lat]
         zoom: 3, // starting zoom
       }"
@@ -64,20 +64,23 @@
     <a @click="changeLngLat">Move Marker</a>
   </div>
 </template>
-  
+
   <script setup>
   import { ref } from '#imports';
+
+
+  const lnglat = ref([90, 0]);
   function showAlert() {
     alert('Wow');
   }
-  
+
   const source = ref({
     type: 'geojson',
     data: '/test.geojson',
   });
-  
+
   const enabled = ref(true);
-  
+
   function changeData() {
     source.value = {
       type: 'geojson',
@@ -114,10 +117,8 @@
       },
     };
   }
-  
-  const lnglat = ref([90, 0]);
+
   function changeLngLat() {
     lnglat.value = [lnglat.value[0] + 1, lnglat.value[1] + 1];
   }
   </script>
-  

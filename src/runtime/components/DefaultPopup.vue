@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type LngLatLike, Marker, Popup, type PopupOptions } from "mapbox-gl";
+import { type LngLatLike, Marker, Popup, type PopupOptions } from "maplibre-gl";
 import { type Ref } from "vue";
 import { onUnmounted, onMounted, defineMapboxPopup, inject, ref, watch } from "#imports";
 
@@ -29,7 +29,7 @@ onMounted(() => {
         popup?.on("close", () => {
             emit("close", popup);
         });
-        
+
         if (props.text) popup?.setText(props.text);
     }
 

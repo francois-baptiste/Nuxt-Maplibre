@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ScaleControl } from 'mapbox-gl'
+import { ScaleControl } from 'maplibre-gl'
 import { inject, onMounted, onUnmounted, ref, useMapbox } from "#imports";
 
 interface Props {

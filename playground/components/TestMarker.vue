@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { MarkerOptions } from 'mapbox-gl';
+    import { MarkerOptions } from 'maplibre-gl';
     import { ref, watch } from 'vue';
     import { defineMapboxMarker, toRef } from '#imports';
 
@@ -40,4 +40,3 @@
         padding: 0;
     }
 </style>
-     

@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import { type AnySourceData, GeoJSONSource, type VectorSourceImpl, ImageSource, type RasterSource, Map } from "mapbox-gl";
+import { type AnySourceData, GeoJSONSource, type VectorSourceImpl, ImageSource, type RasterSource, Map } from "maplibre-gl";
 import { inject, onUnmounted, watch, useMapbox, computed, useMapboxInstance, triggerRef, _useMapboxInstances } from "#imports";
 
 interface Props {

@@ -1,6 +1,6 @@
 import { useMapboxInstance } from "#imports";
 import { watchOnce } from "@vueuse/core";
-import { Map } from "mapbox-gl";
+import { Map } from "maplibre-gl";
 
 type MapboxCallback = (map: Map) => void
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AttributionControl } from 'mapbox-gl'
+import { AttributionControl } from 'maplibre-gl'
 import { useMapbox, inject, onMounted, onUnmounted, ref } from "#imports";
 
 interface AttributionControlOptions {

@@ -1,5 +1,5 @@
 import { type Ref, computed } from 'vue';
-import { Marker } from "mapbox-gl";
+import { Marker } from "maplibre-gl";
 import { useState } from "#imports";
 import type { MapboxMarkerObject } from '../../module';
 

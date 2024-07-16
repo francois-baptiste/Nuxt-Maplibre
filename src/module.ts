@@ -1,6 +1,6 @@
 import { defineNuxtModule, createResolver, addImportsDir, addComponentsDir } from '@nuxt/kit'
 import type { RuntimeConfig, AppConfig } from '@nuxt/schema';
-import type { MapboxOptions, Map, Popup, Marker } from 'mapbox-gl';
+import type { MapboxOptions, Map, Popup, Marker } from 'maplibre-gl';
 import { defu } from 'defu'
 // Module options TypeScript inteface definition
 export interface NuxtMapboxOptions {
@@ -51,8 +51,8 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Fixes #2 (https://github.com/AlexLavoie42/Nuxt-Mapbox/issues/2)
     // Might be related? (https://github.com/nuxt/nuxt/issues/19426)
-    nuxt.options.alias['mapbox-gl'] = 'mapbox-gl'
-    
+    nuxt.options.alias['maplibre-gl'] = 'maplibre-gl'
+
     const appConfig = nuxt.options.appConfig as ExtendedAppConfig
     appConfig._MAPBOX_CONFIG = {
       accessToken: options.accessToken,
@@ -71,6 +71,6 @@ export default defineNuxtModule<ModuleOptions>({
       path: resolver.resolve('./runtime/components'),
       prefix: 'mapbox'
     })
-    
+
   }
 })

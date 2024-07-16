@@ -1,4 +1,4 @@
-import { Popup } from "mapbox-gl";
+import { Popup } from "maplibre-gl";
 import { watch, useMapboxPopupRef } from "#imports";
 
 export function useMapboxPopup(popupID: string, callback: (popup: Popup) => void) {

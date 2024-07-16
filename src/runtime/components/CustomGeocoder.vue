@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { default as mapboxgl } from 'mapbox-gl'
+import { default as mapboxgl } from 'maplibre-gl'
 import { ref, onMounted, watch, initMapbox } from "#imports";
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
 import type { GeocoderOptions, Result } from '@mapbox/mapbox-gl-geocoder';
@@ -19,7 +19,7 @@ interface Props {
 }
 const props = withDefaults(defineProps<Props>(), { options: () => ({}), modelValue: undefined });
 
-const emit = defineEmits<{ 
+const emit = defineEmits<{
     (e: "update:modelValue", result: MapboxGeocoder.Result | undefined ): void
     (e: "change", event: Event): void,
     (e: "keydown", event: Event): void

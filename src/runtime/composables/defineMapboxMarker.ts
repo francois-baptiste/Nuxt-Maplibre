@@ -1,15 +1,15 @@
 import { whenever } from '@vueuse/core';
 import { inject, isRef, onUnmounted, ref, useMapbox, useMapboxMarker, useMapboxMarkerRef, useState, watch, type Ref } from '#imports';
-import mapboxgl, { type MarkerOptions, Marker } from 'mapbox-gl';
+import mapboxgl, { type MarkerOptions, Marker } from 'maplibre-gl';
 import type { MapboxMarkerObject } from '../../module';
 
 /**
  * Create a new Marker instance for a component. Will be automatically added to map if it is nested in MapboxMap
- * 
+ *
  * This overload adds the passed template ref to the marker. It has to pass a Ref since the Marker instance has to be created after html is mounted
- * 
+ *
  * You should set the marker properties through the callback, since you cannot normally access it before it is attached to map.
- * 
+ *
  * @param markerHTML Optionally pass a template ref to automatically put html inside marker
  * @param mapID Optionally pass the mapID manually. Will be auto injected if component is nested in MapboxMap
  */
@@ -22,7 +22,7 @@ export function defineMapboxMarker(
 
 /**
  * Create a new Marker instance for a component. Will be automatically added to map if it is nested in MapboxMap
- * 
+ *
  * @param mapID Optionally pass the mapID manually. Will be auto injected if component is nested in MapboxMap
  */
 export function defineMapboxMarker(markerID: string,
@@ -66,7 +66,7 @@ export function defineMapboxMarker(markerID: string, options: MarkerOptions & { 
             const mapbox_marker_instances: Ref<MapboxMarkerObject> = useState('mapbox_marker_instances', () => {return {}});
             mapbox_marker_instances.value[markerID] = new mapboxgl.Marker(markerOptions);
             const marker = mapbox_marker_instances.value[markerID]
-        
+
             useMapbox(mapId || mapID, (map) => {
                 marker.setLngLat(markerOptions.lnglat).addTo(map);
             })

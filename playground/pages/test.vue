@@ -4,7 +4,7 @@
       map-id="map"
       style="position: absolute; top: 0; bottom: 0; left: 250px; width: 500px;"
       :options="{
-        style: 'mapbox://styles/mapbox/light-v11', // style URL
+        style: 'https://demotiles.maplibre.org/style.json', // style URL
         center: [-68.137343, 45.137451], // starting position
         zoom: 5 // starting zoom
       }"
@@ -55,13 +55,13 @@
         }"
       />
     </MapboxMap>
-    <NuxtLink to="/">
+    <NuxtLink to="/test2">
       TEST
     </NuxtLink>
     <button @click="remove">Toggle Layer</button>
   </div>
 </template>
-  
+
 <script setup>
 import {ref} from "#imports"
   const enabled = ref(true)
@@ -69,4 +69,3 @@ import {ref} from "#imports"
     enabled.value = !enabled.value
   }
 </script>
-  

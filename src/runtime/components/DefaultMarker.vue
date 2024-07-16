@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type MarkerOptions, type LngLatLike, Marker } from "mapbox-gl";
+import { type MarkerOptions, type LngLatLike, Marker } from "maplibre-gl";
 import { computed, defineMapboxMarker, onMounted, provide, ref, useSlots, watch } from "#imports";
 import { syncRefs, useVModel } from "@vueuse/core";
 

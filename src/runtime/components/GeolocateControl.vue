@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { GeolocateControl } from "mapbox-gl";
+import { GeolocateControl } from "maplibre-gl";
 import { ref, inject, useMapbox, onMounted, onUnmounted, } from "#imports";
 
 interface GeolocateControlOptions {
@@ -39,7 +39,7 @@ useMapbox(mapId, (map) => {
     geolocateRef.value = geolocate;
 
     map?.addControl(geolocate, props.position);
-    
+
     geolocate.on("geolocate", () => {
         emit("geolocate", geolocate);
     });

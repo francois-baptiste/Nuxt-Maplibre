@@ -9,7 +9,7 @@ import {
     MapTouchEvent,
     MapWheelEvent,
     Map
-} from "mapbox-gl";
+} from "maplibre-gl";
 import { provide, onMounted, type StyleValue } from "vue";
 import { cleanMapboxInstance, useMapboxRef, onUnmounted, defineMapboxInstance, watch, useMapboxBeforeLoad, ref } from "#imports";
 import type { MapboxComponentOptions } from "../../module";
@@ -18,7 +18,7 @@ import { useResizeObserver } from "@vueuse/core";
 const props = defineProps<{
     mapId: string;
     options?: MapboxComponentOptions;
-    
+
     // Events in props so we can easily check/watch if they exist
     onError?: Function;
     onLoad?: Function;

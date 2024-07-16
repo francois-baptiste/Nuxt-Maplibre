@@ -1,5 +1,5 @@
 import { useMapboxInstance, initMapbox, _useMapboxInstances, ref, shallowReactive, shallowRef, triggerRef, isShallow, markRaw } from "#imports"
-import {default as mapboxgl} from 'mapbox-gl'
+import {default as mapboxgl} from 'maplibre-gl'
 
 export function defineMapboxInstance(key: string, options: mapboxgl.MapboxOptions = {container: key}) {
     initMapbox();

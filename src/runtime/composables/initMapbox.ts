@@ -1,6 +1,6 @@
 import { useState } from '#app';
-import {default as mapboxgl} from 'mapbox-gl'
-import 'mapbox-gl/dist/mapbox-gl.css';
+import {default as mapboxgl} from 'maplibre-gl'
+import 'maplibre-gl/dist/maplibre-gl.css';
 import type { ExtendedRuntimeConfig } from '../../module';
 import { useRuntimeConfig } from '#imports'
 

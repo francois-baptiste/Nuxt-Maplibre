@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import { default as mapboxgl } from 'mapbox-gl'
+import { default as mapboxgl } from 'maplibre-gl'
 import { ref, onMounted, useMapbox, inject, onUnmounted, initMapbox } from "#imports";
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
 

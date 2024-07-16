@@ -1,13 +1,13 @@
 import { watchOnce } from '@vueuse/core';
 import type { ComputedRef } from 'vue';
-import { Map } from "mapbox-gl";
+import { Map } from "maplibre-gl";
 import { _useMapboxInstanceWithLoaded } from "#imports";
 
 type MapboxCallback = (map: Map) => void
 
 /**
  * Executes a callback function when the Mapbox instance with the specified map ID is available & loaded.
- * 
+ *
  * if you need access to the map before load be sure to use `useMapboxBeforeLoad` instead
  *
  * @param {string} mapID - The ID of the Mapbox map.
@@ -27,7 +27,7 @@ export function useMapbox(mapID: string, callback: MapboxCallback): void {
                 }
             })
         }
-        
+
         return true;
     }
 

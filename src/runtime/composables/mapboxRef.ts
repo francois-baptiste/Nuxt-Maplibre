@@ -1,4 +1,4 @@
-import { Map } from "mapbox-gl";
+import { Map } from "maplibre-gl";
 import { _useMapboxInstances, computed, ref, shallowRef, triggerRef, watch, type ComputedRef, type Ref } from "#imports";
 
 export function useMapboxRef(mapID: string): Ref<Map | undefined> {

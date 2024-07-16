@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NavigationControl } from 'mapbox-gl'
+import { NavigationControl } from 'maplibre-gl'
 import { useMapbox, inject, onMounted, ref, onUnmounted } from "#imports";
 
 interface NavigationControlOptions {

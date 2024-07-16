@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FullscreenControl, type FullscreenControlOptions } from 'mapbox-gl'
+import { FullscreenControl, type FullscreenControlOptions } from 'maplibre-gl'
 import { onUnmounted, useMapbox, onMounted, inject, ref } from "#imports";
 
 interface Props {
